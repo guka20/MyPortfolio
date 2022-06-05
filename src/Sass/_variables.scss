@@ -1,0 +1,12 @@
+$background-color: rgb(46, 46, 46);
+$font-color: #e5e2df;
+$max-width: 1100px;
+$icons-color:#2c2a2a;
+$font-size:1.4rem;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@mixin transition-ease{
+    transition: all 0.5 ease-in-out;
+}
+*{
+    border: none;
+}

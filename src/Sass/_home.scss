@@ -1,0 +1,90 @@
+@mixin mixInAnimate($name, $mLeft, $mTop) {
+  @media screen and (min-width: 800px) {
+    @if $name==text {
+      @keyframes text {
+        from {
+          margin-left: $mLeft;
+          margin-top: $mTop;
+        }
+        to {
+          margin-top: 0;
+          margin-left: 0;
+        }
+      }
+    } @else {
+      @keyframes photo {
+        from {
+          margin-left: $mLeft;
+          margin-top: $mTop;
+        }
+        to {
+          margin-top: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+.home-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  header {
+    font-size: 30px;
+    animation-name: text;
+    animation-duration: 3s;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .img {
+      animation-name: photo;
+      animation-duration: 3s;
+      @include mixInAnimate(photo, 300px, 0px);
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(
+          to right bottom,
+          rgba($background-color, 0.9),
+          rgba($background-color, 0)
+        ),
+        url("../image/Portfolio.png") center top;
+      background-size: cover;
+      border-radius: 15px;
+    }
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div {
+      animation-name: text;
+      animation-duration: 3s;
+      @include mixInAnimate(text, -300px, 0px);
+      font-size: 2.4rem;
+      font-weight: bolder;
+      font-family: "Noto Serif", serif;
+    }
+
+    span {
+      animation-name: text;
+      animation-duration: 3s;
+      @include mixInAnimate(text, -300px, 0px);
+      padding: 14px 0px 0px;
+      font-size: 1.7rem;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+    span.frnt-dev {
+      font-family: "Inconsolata", monospace;
+      font-size: 2.1rem;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+  }
+}
