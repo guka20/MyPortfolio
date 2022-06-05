@@ -17,7 +17,7 @@ const Projects = () => {
           <motion.div
             key={l.id}
             className="container"
-            initial={{ marginTop: -20  }}
+            initial={{ marginTop: -20 }}
             animate={{ marginTop: 0 }}
             transition={{
               duration: 1,

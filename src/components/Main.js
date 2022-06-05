@@ -4,7 +4,6 @@ import { AddressContext } from "../Routers/Routers";
 const Main = () => {
   const setAddress = useContext(AddressContext);
   useEffect(() => {
-    alert("hello world");
     setAddress("Portfolio");
   }, [setAddress]);
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useContext,useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { AddressContext } from "../Routers/Routers";
 const skillsList = [
   {
@@ -30,12 +30,12 @@ const About = () => {
   useEffect(() => {
     setAddress("About");
   }, [setAddress]);
-  const progresiveDiv={
+  const progresiveDiv = {
     width: "90%",
     maxWidth: "900px",
     height: "15px",
     borderRadius: "10px",
-  }
+  };
   return (
     <section className="about">
       <header>
@@ -44,7 +44,7 @@ const About = () => {
           animate={{ top: 0, position: "relative" }}
           transition={{ duration: 2 }}
         >
-          Who Am I?
+          Who I AM?
         </motion.h1>
       </header>
       <main>
@@ -118,7 +118,7 @@ const About = () => {
                         l.percent
                       }%,#6361e0 ${100 - l.percent}%)`,
                     }}
-                    transition={{duration:3,delay:3}}
+                    transition={{ duration: 3, delay: 3 }}
                   ></motion.div>
                 </motion.div>
               );
